@@ -11,7 +11,7 @@ class SignUpContent extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           _createImage(context),
@@ -22,13 +22,13 @@ class SignUpContent extends StatelessWidget {
   }
 
   Widget _createImage(BuildContext context) {
-    return Image.asset(PathConstants.logo);
+    return Image.asset(PathConstants.pmom);
   }
 
   Widget _createSignInButton(BuildContext context) {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
-      crossAxisAlignment: CrossAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         const Text('EvaCare',
         style: TextStyle(
@@ -48,19 +48,13 @@ class SignUpContent extends StatelessWidget {
           onPressed: () {
             AuthService().signInWWithGoogle(context);
           },
-          child: const Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              Icon(Icons.facebook),
-              Text(
-                'Continue',
-              style: TextStyle(
-                fontSize: 25,
-                color: Colors.white,
-                fontWeight: FontWeight.w400,
-              ),),
-            ],
-          ),
+          child: const Text(
+            'Continue',
+          style: TextStyle(
+            fontSize: 25,
+            color: Colors.white,
+            fontWeight: FontWeight.w400,
+          ),),
         ),
       ],
     );

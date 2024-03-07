@@ -41,6 +41,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
                 children: DataConst.onboardingTiles,
               )
             ),
+            const YMargin(y: 15),
             PageViewDotIndicator(
               currentItem: selectedPage, 
               count: pageCount, 

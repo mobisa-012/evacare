@@ -11,7 +11,8 @@ class OnboardingTile extends StatelessWidget {
     return Column(
       children: [
        const YMargin(y: 50),
-       Image.asset(image),
+       Expanded(child: Image.asset(image)),
+       const YMargin(y: 20),
        Text(
         title,
         style: const TextStyle(
